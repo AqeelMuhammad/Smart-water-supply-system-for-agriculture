@@ -2,7 +2,7 @@
 
 ## Introduction
 
-* All the project related files related to the development of a smart water supply system for agriculture for EN2560 -  Internet of Things Design and Competition module in department of Electronic and Telecommunication Engineering.
+* All the project related files are related to the development of a smart water supply system for agriculture for EN2560 -  Internet of Things Design and Competition module in department of Electronic and Telecommunication Engineering.
 * This system can monitor the soil moisture, temperature, and humidity from the sensors in the farm. Here we are using the Watson IoT Simulator for getting the Temperature,Humidity and Soil Moisture values.
 * The farmer can also get the realtime weather forecasting data of the location of the farm by using OpenWeatherMap API.
 * The farmer can control the watering system via dashboard, via voice command, via webpage or via the blynk app from anywhere at anytime. 
