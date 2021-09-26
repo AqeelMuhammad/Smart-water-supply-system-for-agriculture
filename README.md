@@ -10,6 +10,7 @@
 ## Watson IoT Sensor Simulator
 
 * For the simulation purposes, here we use [IBM IoT Sensor Simulator](https://watson-iot-sensor-simulator.mybluemix.net/) for monitoring the farm. To connect to this simulator, the user need to enter the device information created. Here we can change the values using up and down arrows.
+
 ![](Images/IoTSimulator.png)
 
 ## Dashboard
