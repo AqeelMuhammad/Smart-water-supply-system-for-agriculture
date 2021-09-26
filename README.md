@@ -3,13 +3,13 @@
 ## Introduction
 
 * All the project related files are related to the development of a smart water supply system for agriculture for EN2560 -  Internet of Things Design and Competition module in department of Electronic and Telecommunication Engineering.
-* This system can monitor the soil moisture, temperature, and humidity from the sensors in the farm. Here we are using the Watson IoT Simulator for getting the Temperature,Humidity and Soil Moisture values.
+* This system can monitor the soil moisture, temperature, and humidity from the sensors in the farm. We are using the Watson IoT Simulator to get the Temperature,Humidity and Soil Moisture values.
 * The farmer can also get the realtime weather forecasting data of the location of the farm by using OpenWeatherMap API.
 * The farmer can control the watering system via dashboard, via voice command, via webpage or via the blynk app from anywhere at anytime. 
 
 ## Watson IoT Sensor Simulator
 
-* For the simulation purposes, here we use [IBM IoT Sensor Simulator](https://watson-iot-sensor-simulator.mybluemix.net/) for monitoring the farm. To connect to this simulator, the user need to enter the device information created. Here we can change the values using up and down arrows.
+* For the simulation purposes, here we use [IBM IoT Sensor Simulator](https://watson-iot-sensor-simulator.mybluemix.net/) for monitoring the farm. To connect to this simulator, the user needs to enter the device information created. Here we can change the values using up and down arrows.
 
 ![](Images/IoTSimulator.png)
 
@@ -31,7 +31,7 @@
 
 ## Different motor controlling mwthods
 
-* The farmer can control the watering system via [dashboard](https://smartagricultureapp.mybluemix.net/ui), via voice command, via webpage or via the blynk app from anywhere at anytime. 
+* The farmer can control the watering system via [dashboard](https://smartagricultureapp.mybluemix.net/ui), via voice commands, via webpage or via the blynk app from anywhere at anytime. 
 ![](Images/Controling%20modes.png)
 
 ### Group Members
