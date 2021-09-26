@@ -30,8 +30,9 @@
 
 
 ### Group Members
-1. [Tharuka Nilupul](https://github.com/TharukaN17)
+
 1. [Muhammad Aqeel](https://github.com/AqeelMuhammad)
 1. [Navindu Rasanjana](https://github.com/NavinduRasanjana)
+1. [Tharuka Nilupul](https://github.com/TharukaN17)
 
 * For demostration Videos [click here](https://youtube.com/playlist?list=PL8BtMKbBdoseuaje2f-dUfK9YvDc6sRkN)
