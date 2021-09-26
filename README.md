@@ -1,2 +1,22 @@
-# Smart-water-supply-system-for-agriculture
-This is an IoT-based project 
+# Smart Water Supply System for Agriculture
+
+## Introduction
+
+* All the project related files related to the development of a smart water supply system for agriculture for EN2560 -  Internet of Things Design and Competition module in department of Electronic and Telecommunication Engineering.
+* This system can monitor the soil moisture, temperature, and humidity from the sensors in the farm. Here we are using the Watson IoT Simulator for getting the Temperature,Humidity and Soil Moisture values.
+* The farmer can also get the realtime weather forecasting data of the location of the farm by using OpenWeatherMap API.
+* The farmer can control the watering system via dashboard, via voice command, via webpage or via the blynk app from anywhere at anytime. 
+
+## Watson IoT Sensor Simulator
+
+* For the simulation purposes, here we use [IBM IoT Sensor Simulator](https://watson-iot-sensor-simulator.mybluemix.net/) for monitoring the farm. To connect to this simulator, the user need to enter the device information created. Here we can change the values using up and down arrows.
+
+### Group Members
+1. [Tharuka Nilupul](https://github.com/TharukaN17)
+1. [Muhammad Aqeel](https://github.com/AqeelMuhammad)
+1. [Navindu Rasanjana](https://github.com/NavinduRasanjana)
+
+* To visit the dashboard, [click here](https://smartagricultureapp.mybluemix.net/ui)
+
+
+* After setting the technical environment, we are confuguring a dashboard using node-red for the farmer to observe the data like temperature, humidity, etc..
