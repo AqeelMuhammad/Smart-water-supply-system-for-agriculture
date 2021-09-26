@@ -14,7 +14,7 @@
 ## Dashboard
 
 * The collected data from the sensor simulator and [OpenWeatherMap API](https://home.openweathermap.org/users/sign_in) is viewed in the dashboard. From the buttons, the motor can be turned on and off.
-* * To visit the dashboard, [click here](https://smartagricultureapp.mybluemix.net/ui)
+* To visit the dashboard, [click here](https://smartagricultureapp.mybluemix.net/ui)
 
 ## Inputs
 
