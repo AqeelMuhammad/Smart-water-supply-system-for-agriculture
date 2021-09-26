@@ -26,7 +26,7 @@
 
 ## Node-Red Program Flow
 
-* The designed flow is shown below
+* The designed flow is shown below you can view it [here](NodeREDflows.json)
 ![](Images/NodeRed.png)
 
 ## Different motor controlling mwthods
