@@ -1,0 +1,3082 @@
+[
+    {
+        "id": "43329aa5.bde1b4",
+        "type": "tab",
+        "label": "Weather Data",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "3308500f.11eed",
+        "type": "tab",
+        "label": "Settings",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "a4cf6dbe.bd521",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#00ff32",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#00ccff",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "reset": false
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#097479",
+                    "edited": true
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#097479",
+                    "edited": true
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": true
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": true
+                },
+                "group-textColor": {
+                    "value": "#0eb8c0",
+                    "edited": true
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": true
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": true
+                },
+                "widget-backgroundColor": {
+                    "value": "#097479",
+                    "edited": true
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": true
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "c625a41c.f98cb8",
+        "type": "ui_group",
+        "name": "Sensor Data",
+        "tab": "219bf0a9.3b4c1",
+        "order": 1,
+        "disp": true,
+        "width": "15",
+        "collapse": false
+    },
+    {
+        "id": "76b0b8.f7debf48",
+        "type": "ibmiot",
+        "name": "Device_1",
+        "keepalive": "60",
+        "serverName": "nrpkrn.messaging.internetofthings.ibmcloud.com",
+        "cleansession": true,
+        "appId": "",
+        "shared": false
+    },
+    {
+        "id": "219bf0a9.3b4c1",
+        "type": "ui_tab",
+        "name": "Dashboard",
+        "icon": "fa-tachometer",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "4bbf80eb.924e1",
+        "type": "ui_group",
+        "name": "Stop",
+        "tab": "37b9ddc0.7115e2",
+        "order": 6,
+        "disp": false,
+        "width": "2",
+        "collapse": false
+    },
+    {
+        "id": "d741e10e.86e91",
+        "type": "ui_group",
+        "name": "City/Country",
+        "tab": "37b9ddc0.7115e2",
+        "order": 2,
+        "disp": true,
+        "width": 4,
+        "collapse": false
+    },
+    {
+        "id": "a9121318.eebfd",
+        "type": "ui_group",
+        "name": "Refresh Time",
+        "tab": "37b9ddc0.7115e2",
+        "order": 5,
+        "disp": true,
+        "width": 4,
+        "collapse": false
+    },
+    {
+        "id": "faa6d74.f7c2028",
+        "type": "ui_group",
+        "name": "Weather Data",
+        "tab": "219bf0a9.3b4c1",
+        "order": 1,
+        "disp": true,
+        "width": "8",
+        "collapse": false
+    },
+    {
+        "id": "dd769f3a.88aaf",
+        "type": "ui_group",
+        "name": "Motor",
+        "tab": "219bf0a9.3b4c1",
+        "order": 3,
+        "disp": true,
+        "width": 4,
+        "collapse": false
+    },
+    {
+        "id": "37b9ddc0.7115e2",
+        "type": "ui_tab",
+        "name": "Settings",
+        "icon": "settings",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "ccdc99a0.267198",
+        "type": "twilio-api",
+        "name": "",
+        "sid": "ACce8a3115e709ff606e382e51068695ad",
+        "from": "+14087638590"
+    },
+    {
+        "id": "ad1d35c5.2427f8",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "Broker.mqttdashboard.com",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "e65ebad4.6550c8",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "faa6d74.f7c2028",
+        "order": 2,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "e2683279.b871f",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "faa6d74.f7c2028",
+        "order": 4,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "ce21d594.609c58",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "faa6d74.f7c2028",
+        "order": 6,
+        "width": 8,
+        "height": 1
+    },
+    {
+        "id": "d60b07f4.afe108",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "c625a41c.f98cb8",
+        "order": 4,
+        "width": 15,
+        "height": 1
+    },
+    {
+        "id": "b957206d.fbeaf",
+        "type": "ui_group",
+        "name": "Input Method",
+        "tab": "37b9ddc0.7115e2",
+        "order": 1,
+        "disp": true,
+        "width": "4",
+        "collapse": false
+    },
+    {
+        "id": "2728a758.13b708",
+        "type": "ui_group",
+        "name": "Cordinates",
+        "tab": "37b9ddc0.7115e2",
+        "order": 3,
+        "disp": true,
+        "width": 4,
+        "collapse": false
+    },
+    {
+        "id": "a217ac7b.8f8e9",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "",
+        "order": 1,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "ab9b1a37.3d8c98",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "",
+        "order": 1,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "ab623946.31b588",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "",
+        "order": 1,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "8f65dab2.df6e28",
+        "type": "ui_group",
+        "name": "Set Limits",
+        "tab": "37b9ddc0.7115e2",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "8ec2efc3.bd22",
+        "type": "ui_gauge",
+        "z": "43329aa5.bde1b4",
+        "name": "",
+        "group": "faa6d74.f7c2028",
+        "order": 7,
+        "width": 4,
+        "height": 4,
+        "gtype": "gage",
+        "title": "Temperature",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": "-5",
+        "max": "50",
+        "colors": [
+            "#0080ff",
+            "#008040",
+            "#ca3838"
+        ],
+        "seg1": "15",
+        "seg2": "25",
+        "x": 3282.2229194641113,
+        "y": 474.16680335998535,
+        "wires": []
+    },
+    {
+        "id": "2ca06816.7a9b18",
+        "type": "debug",
+        "z": "43329aa5.bde1b4",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 3006.667335510254,
+        "y": 418.50013732910156,
+        "wires": []
+    },
+    {
+        "id": "7aad1df8.e16134",
+        "type": "ui_text",
+        "z": "43329aa5.bde1b4",
+        "group": "faa6d74.f7c2028",
+        "order": 3,
+        "width": 5,
+        "height": 1,
+        "name": "",
+        "label": "Cloud",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 3263.2230834960938,
+        "y": 425.8334951400757,
+        "wires": []
+    },
+    {
+        "id": "39609adf.a227b6",
+        "type": "function",
+        "z": "43329aa5.bde1b4",
+        "name": "Weather",
+        "func": "var msg1 = { payload:msg.payload.detail };\nvar msg2 = { payload:msg.payload.tempc };\nvar msg3 = { payload:msg.payload.humidity };\nvar msg4 = { payload:msg.payload.pressure };\nvar msg5 = { payload:msg.payload.windspeed };\nvar msg6 = { payload:msg.payload.location };\nvar msg7 = { payload:msg.payload.description };\nreturn [msg1,msg2,msg3,msg4,msg5,msg6,msg7];",
+        "outputs": 7,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3014.0006828308105,
+        "y": 570.500114440918,
+        "wires": [
+            [
+                "7aad1df8.e16134"
+            ],
+            [
+                "8ec2efc3.bd22"
+            ],
+            [
+                "ca21b13c.e79d3"
+            ],
+            [
+                "8c50d74a.da0a58"
+            ],
+            [
+                "cf43e6eb.c14028"
+            ],
+            [
+                "7fab2402.ed4abc"
+            ],
+            [
+                "6468b7c3.5d8758"
+            ]
+        ]
+    },
+    {
+        "id": "7fab2402.ed4abc",
+        "type": "ui_text",
+        "z": "43329aa5.bde1b4",
+        "group": "faa6d74.f7c2028",
+        "order": 1,
+        "width": 5,
+        "height": 1,
+        "name": "",
+        "label": "Location",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 3272.667407989502,
+        "y": 661.8333740234375,
+        "wires": []
+    },
+    {
+        "id": "6468b7c3.5d8758",
+        "type": "ui_text",
+        "z": "43329aa5.bde1b4",
+        "group": "faa6d74.f7c2028",
+        "order": 5,
+        "width": 8,
+        "height": 1,
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 3266.779327392578,
+        "y": 708.0557727813721,
+        "wires": []
+    },
+    {
+        "id": "aa23318f.b124c",
+        "type": "openweathermap",
+        "z": "43329aa5.bde1b4",
+        "name": "",
+        "wtype": "current",
+        "lon": "",
+        "lat": "",
+        "city": "",
+        "country": "",
+        "language": "en",
+        "x": 2811.334125518799,
+        "y": 540.5001449584961,
+        "wires": [
+            [
+                "2ca06816.7a9b18",
+                "39609adf.a227b6"
+            ]
+        ]
+    },
+    {
+        "id": "ca21b13c.e79d3",
+        "type": "ui_gauge",
+        "z": "43329aa5.bde1b4",
+        "name": "",
+        "group": "faa6d74.f7c2028",
+        "order": 8,
+        "width": 4,
+        "height": 4,
+        "gtype": "wave",
+        "title": "Humidity",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 3274.667652130127,
+        "y": 520.6113338470459,
+        "wires": []
+    },
+    {
+        "id": "cf43e6eb.c14028",
+        "type": "ui_gauge",
+        "z": "43329aa5.bde1b4",
+        "name": "",
+        "group": "faa6d74.f7c2028",
+        "order": 9,
+        "width": 4,
+        "height": 4,
+        "gtype": "compass",
+        "title": "Wind Speed",
+        "label": "meter/sec",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 3279.778606414795,
+        "y": 615.8335103988647,
+        "wires": []
+    },
+    {
+        "id": "8c50d74a.da0a58",
+        "type": "ui_gauge",
+        "z": "43329aa5.bde1b4",
+        "name": "",
+        "group": "faa6d74.f7c2028",
+        "order": 10,
+        "width": 4,
+        "height": 4,
+        "gtype": "donut",
+        "title": "Pressure",
+        "label": "hPa",
+        "format": "{{value}}",
+        "min": "900",
+        "max": "1500",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "1100",
+        "seg2": "1300",
+        "x": 3270.111991882324,
+        "y": 569.3890743255615,
+        "wires": []
+    },
+    {
+        "id": "7221288e.8b9978",
+        "type": "ui_slider",
+        "z": "3308500f.11eed",
+        "name": "Soil Moisture Upper Limit",
+        "label": "Upper Limit",
+        "tooltip": "",
+        "group": "8f65dab2.df6e28",
+        "order": 2,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": "100",
+        "step": 1,
+        "x": 364.5953903198242,
+        "y": 495.9048480987549,
+        "wires": [
+            [
+                "96f67dc3.8de28"
+            ]
+        ]
+    },
+    {
+        "id": "96f67dc3.8de28",
+        "type": "function",
+        "z": "3308500f.11eed",
+        "name": "\" maxsm \"",
+        "func": "global.set(\"maxsm\",msg.payload);",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 574.5955238342285,
+        "y": 496.0160102844238,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "573f2b0a.51acf4",
+        "type": "function",
+        "z": "3308500f.11eed",
+        "name": "\" maxh \"",
+        "func": "global.set(\"maxh\",msg.payload);",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 573.9287261962891,
+        "y": 620.1271438598633,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5db50739.9aacf8",
+        "type": "function",
+        "z": "3308500f.11eed",
+        "name": "\" maxt \"",
+        "func": "global.set(\"maxt\",msg.payload);",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 572.706657409668,
+        "y": 758.9049777984619,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3b889816.bbcfb8",
+        "type": "function",
+        "z": "3308500f.11eed",
+        "name": "\" lowsm \"",
+        "func": "global.set(\"lowsm\",msg.payload);",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 575.0397644042969,
+        "y": 543.4603958129883,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ddd07ea0.76711",
+        "type": "function",
+        "z": "3308500f.11eed",
+        "name": "\" lowh \"",
+        "func": "global.set(\"lowh\",msg.payload);",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 573.1508941650391,
+        "y": 668.4603977203369,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "11769a0f.6df756",
+        "type": "function",
+        "z": "3308500f.11eed",
+        "name": "\" lowt \"",
+        "func": "global.set(\"lowt\",msg.payload);",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 561.2620277404785,
+        "y": 811.571533203125,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "36db6417.5e2d1c",
+        "type": "ui_slider",
+        "z": "3308500f.11eed",
+        "name": "Soil Moisture Lower Limit",
+        "label": "Lower Limit",
+        "tooltip": "",
+        "group": "8f65dab2.df6e28",
+        "order": 3,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": "100",
+        "step": 1,
+        "x": 368.03980255126953,
+        "y": 544.5715026855469,
+        "wires": [
+            [
+                "3b889816.bbcfb8"
+            ]
+        ]
+    },
+    {
+        "id": "b7cd7829.09d658",
+        "type": "ui_slider",
+        "z": "3308500f.11eed",
+        "name": "Humidity Upper Limit",
+        "label": "Upper Limit",
+        "tooltip": "",
+        "group": "8f65dab2.df6e28",
+        "order": 5,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": "100",
+        "step": 1,
+        "x": 358.59535217285156,
+        "y": 619.5715026855469,
+        "wires": [
+            [
+                "573f2b0a.51acf4"
+            ]
+        ]
+    },
+    {
+        "id": "8af20018.3dc71",
+        "type": "ui_slider",
+        "z": "3308500f.11eed",
+        "name": "Humidity Lower Limit",
+        "label": "Lower Limit",
+        "tooltip": "",
+        "group": "8f65dab2.df6e28",
+        "order": 6,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": "100",
+        "step": 1,
+        "x": 358.4842300415039,
+        "y": 668.7937211990356,
+        "wires": [
+            [
+                "ddd07ea0.76711"
+            ]
+        ]
+    },
+    {
+        "id": "8d7a0b60.fd61b8",
+        "type": "ui_slider",
+        "z": "3308500f.11eed",
+        "name": "Temperature Upper Limit",
+        "label": "Upper Limit",
+        "tooltip": "",
+        "group": "8f65dab2.df6e28",
+        "order": 8,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "-5",
+        "max": "50",
+        "step": 1,
+        "x": 367.7064743041992,
+        "y": 758.4604215621948,
+        "wires": [
+            [
+                "5db50739.9aacf8"
+            ]
+        ]
+    },
+    {
+        "id": "4c7f5c98.a228a4",
+        "type": "ui_slider",
+        "z": "3308500f.11eed",
+        "name": "Temperatuer Lower Limit",
+        "label": "Lower Limit",
+        "tooltip": "",
+        "group": "8f65dab2.df6e28",
+        "order": 9,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "-5",
+        "max": "50",
+        "step": 1,
+        "x": 369.8176040649414,
+        "y": 811.0160493850708,
+        "wires": [
+            [
+                "11769a0f.6df756"
+            ]
+        ]
+    },
+    {
+        "id": "c9472d36.5453f",
+        "type": "ui_button",
+        "z": "43329aa5.bde1b4",
+        "name": "",
+        "group": "d741e10e.86e91",
+        "order": 3,
+        "width": 2,
+        "height": 1,
+        "passthru": false,
+        "label": "Submit",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "add",
+        "payload": "",
+        "payloadType": "date",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1848.4527282714844,
+        "y": 305.8335609436035,
+        "wires": [
+            [
+                "1ec18cd0.928843",
+                "44ea641d.08668c",
+                "a5ff2f90.1e122"
+            ]
+        ]
+    },
+    {
+        "id": "f7c122c4.7128a",
+        "type": "ui_button",
+        "z": "43329aa5.bde1b4",
+        "name": "",
+        "group": "4bbf80eb.924e1",
+        "order": 1,
+        "width": 2,
+        "height": 2,
+        "passthru": false,
+        "label": "Stop",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "Red",
+        "icon": "https://cdn5.vectorstock.com/i/1000x1000/73/54/start-button-icon-symbol-premium-quality-isolated-vector-14807354.jpg",
+        "payload": "set",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "x": 1670.1192626953125,
+        "y": 689.4048986434937,
+        "wires": [
+            [
+                "7266dbc6.e2ff94",
+                "19787ff6.fac1e"
+            ]
+        ]
+    },
+    {
+        "id": "7f4c2e84.152fe",
+        "type": "ui_button",
+        "z": "43329aa5.bde1b4",
+        "name": "",
+        "group": "a9121318.eebfd",
+        "order": 2,
+        "width": 4,
+        "height": 1,
+        "passthru": false,
+        "label": "Set",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "cached",
+        "payload": "",
+        "payloadType": "date",
+        "topic": "",
+        "topicType": "str",
+        "x": 1666.785961151123,
+        "y": 645.1191062927246,
+        "wires": [
+            [
+                "b23254c6.8a1ff8",
+                "8e5a73a2.7fc68"
+            ]
+        ]
+    },
+    {
+        "id": "1ec18cd0.928843",
+        "type": "trigger",
+        "z": "43329aa5.bde1b4",
+        "name": "Trigger",
+        "op1": "1",
+        "op2": "0",
+        "op1type": "str",
+        "op2type": "str",
+        "duration": "-5",
+        "extend": false,
+        "overrideDelay": true,
+        "units": "min",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 2227.4291648864746,
+        "y": 573.476318359375,
+        "wires": [
+            [
+                "89d8aa10.5c1288"
+            ]
+        ]
+    },
+    {
+        "id": "ee321b2b.42c298",
+        "type": "function",
+        "z": "43329aa5.bde1b4",
+        "name": "Set Location",
+        "func": "let cityd=global.get(\"cityg\");\nlet countryd=global.get(\"countryg\");\nmsg.location={\"city\":cityd,\"country\":countryd};\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2628.095989227295,
+        "y": 540.9287261962891,
+        "wires": [
+            [
+                "aa23318f.b124c"
+            ]
+        ]
+    },
+    {
+        "id": "7266dbc6.e2ff94",
+        "type": "change",
+        "z": "43329aa5.bde1b4",
+        "name": "Reset",
+        "rules": [
+            {
+                "t": "set",
+                "p": "reset",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1856.3096961975098,
+        "y": 692.8335552215576,
+        "wires": [
+            [
+                "1ec18cd0.928843"
+            ]
+        ]
+    },
+    {
+        "id": "44ea641d.08668c",
+        "type": "function",
+        "z": "43329aa5.bde1b4",
+        "name": "5 minutes",
+        "func": "msg.payload=5;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2205.9529342651367,
+        "y": 355.57159996032715,
+        "wires": [
+            [
+                "7d678599.e72cbc"
+            ]
+        ]
+    },
+    {
+        "id": "7d678599.e72cbc",
+        "type": "ui_numeric",
+        "z": "43329aa5.bde1b4",
+        "name": "Refresh Time",
+        "label": "Minutes",
+        "tooltip": "",
+        "group": "a9121318.eebfd",
+        "order": 1,
+        "width": 4,
+        "height": 2,
+        "wrap": false,
+        "passthru": false,
+        "topic": "topic",
+        "topicType": "msg",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "3600",
+        "step": 1,
+        "x": 2373.167407989502,
+        "y": 355.476224899292,
+        "wires": [
+            [
+                "5713d8ff.a32198"
+            ]
+        ]
+    },
+    {
+        "id": "5713d8ff.a32198",
+        "type": "function",
+        "z": "43329aa5.bde1b4",
+        "name": "\" refreshTimeg \"",
+        "func": "global.set(\"refreshTimeg\",msg.payload)",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2564.738899230957,
+        "y": 356.40491104125977,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b23254c6.8a1ff8",
+        "type": "function",
+        "z": "43329aa5.bde1b4",
+        "name": "Min to milisec",
+        "func": "let min = global.get(\"refreshTimeg\");\nlet milsec=min*60*1000;\nmsg.delay=milsec;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1876.6430702209473,
+        "y": 642.2145042419434,
+        "wires": [
+            [
+                "1ec18cd0.928843"
+            ]
+        ]
+    },
+    {
+        "id": "1371b325.7d8d7d",
+        "type": "debug",
+        "z": "43329aa5.bde1b4",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 249.99996948242188,
+        "y": 423.3333435058594,
+        "wires": []
+    },
+    {
+        "id": "f5b220eb.6f35c",
+        "type": "function",
+        "z": "43329aa5.bde1b4",
+        "name": "Temperature",
+        "func": "msg.payload=msg.payload.d.temperature\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 481.0476837158203,
+        "y": 246.66664743423462,
+        "wires": [
+            [
+                "eeedbf67.a2e3a",
+                "8f3689ee.c098e8",
+                "2ff91001.a65f",
+                "bc571ee9.3f60f"
+            ]
+        ]
+    },
+    {
+        "id": "f86e0c3d.636b4",
+        "type": "function",
+        "z": "43329aa5.bde1b4",
+        "name": "Humidity",
+        "func": "msg.payload=msg.payload.d.humidity\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 463.57142215304907,
+        "y": 595.0476025475396,
+        "wires": [
+            [
+                "6f1a984a.09d488",
+                "4592ea21.f8f394",
+                "d2e604aa.580478",
+                "aac4d948.471988"
+            ]
+        ]
+    },
+    {
+        "id": "a54b7551.897328",
+        "type": "function",
+        "z": "43329aa5.bde1b4",
+        "name": "Soil Moisture",
+        "func": "msg.payload=msg.payload.d.objectTemp\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 474.85715823703345,
+        "y": 982.7618760002983,
+        "wires": [
+            [
+                "a22a5848.1854b8",
+                "d2b81c30.657d5",
+                "6eb74bf3.cd3534",
+                "db7e35f.4fc85c8"
+            ]
+        ]
+    },
+    {
+        "id": "eeedbf67.a2e3a",
+        "type": "ui_gauge",
+        "z": "43329aa5.bde1b4",
+        "name": "Temperature",
+        "group": "c625a41c.f98cb8",
+        "order": 1,
+        "width": 5,
+        "height": 6,
+        "gtype": "gage",
+        "title": "Temperature",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": "-5",
+        "max": "50",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "15",
+        "seg2": "25",
+        "x": 702.2858657836914,
+        "y": 217.89283800125122,
+        "wires": []
+    },
+    {
+        "id": "6f1a984a.09d488",
+        "type": "ui_gauge",
+        "z": "43329aa5.bde1b4",
+        "name": "Humidity",
+        "group": "c625a41c.f98cb8",
+        "order": 2,
+        "width": 5,
+        "height": 6,
+        "gtype": "donut",
+        "title": "Humidity",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#723c3c",
+            "#3de600",
+            "#09b7ce"
+        ],
+        "seg1": "50",
+        "seg2": "90",
+        "x": 694.09521484375,
+        "y": 559.2856955528259,
+        "wires": []
+    },
+    {
+        "id": "a22a5848.1854b8",
+        "type": "ui_gauge",
+        "z": "43329aa5.bde1b4",
+        "name": "",
+        "group": "c625a41c.f98cb8",
+        "order": 3,
+        "width": 5,
+        "height": 6,
+        "gtype": "wave",
+        "title": "Soil Moisture",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#15f5f9",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 710.1906127929688,
+        "y": 958.3809733390808,
+        "wires": []
+    },
+    {
+        "id": "da3b0a2e.3d1e18",
+        "type": "ibmiot in",
+        "z": "43329aa5.bde1b4",
+        "authentication": "apiKey",
+        "apiKey": "76b0b8.f7debf48",
+        "inputType": "evt",
+        "logicalInterface": "",
+        "ruleId": "",
+        "deviceId": "IOTsensor",
+        "applicationId": "",
+        "deviceType": "Sensor",
+        "eventType": "+",
+        "commandType": "",
+        "format": "json",
+        "name": "IBM IoT",
+        "service": "registered",
+        "allDevices": "",
+        "allApplications": "",
+        "allDeviceTypes": "",
+        "allLogicalInterfaces": false,
+        "allEvents": true,
+        "allCommands": "",
+        "allFormats": "",
+        "qos": 0,
+        "x": 271.5714183383518,
+        "y": 596.0475968254937,
+        "wires": [
+            [
+                "f5b220eb.6f35c",
+                "f86e0c3d.636b4",
+                "a54b7551.897328",
+                "1371b325.7d8d7d"
+            ]
+        ]
+    },
+    {
+        "id": "8f3689ee.c098e8",
+        "type": "ui_chart",
+        "z": "43329aa5.bde1b4",
+        "name": "",
+        "group": "c625a41c.f98cb8",
+        "order": 5,
+        "width": 5,
+        "height": 5,
+        "label": "Temperature Chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "-5",
+        "ymax": "50",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#23cd23",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 721.3454132080078,
+        "y": 268.0714259147644,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4592ea21.f8f394",
+        "type": "ui_chart",
+        "z": "43329aa5.bde1b4",
+        "name": "",
+        "group": "c625a41c.f98cb8",
+        "order": 6,
+        "width": 5,
+        "height": 5,
+        "label": "Humidity Chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#fbff0f",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 717.9049339294434,
+        "y": 611.095374584198,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d2b81c30.657d5",
+        "type": "ui_chart",
+        "z": "43329aa5.bde1b4",
+        "name": "",
+        "group": "c625a41c.f98cb8",
+        "order": 7,
+        "width": 5,
+        "height": 5,
+        "label": "Soil Moisture Chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#12e1fd"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 729.2381210327148,
+        "y": 1001.2382235527039,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6eb74bf3.cd3534",
+        "type": "switch",
+        "z": "43329aa5.bde1b4",
+        "name": "Check \" lowsm \"",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "lt",
+                "v": "lowsm",
+                "vt": "global"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 713.619083404541,
+        "y": 907.2380537986755,
+        "wires": [
+            [
+                "da57ef85.ee4f5"
+            ],
+            [
+                "bf9a2dfe.05673"
+            ]
+        ]
+    },
+    {
+        "id": "7604fb94.a1df94",
+        "type": "ui_toast",
+        "z": "43329aa5.bde1b4",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": true,
+        "topic": "Please turn ON the Motor !!!",
+        "name": "",
+        "x": 1143.5082092285156,
+        "y": 951.0954294204712,
+        "wires": []
+    },
+    {
+        "id": "da57ef85.ee4f5",
+        "type": "switch",
+        "z": "43329aa5.bde1b4",
+        "name": "Check \" motoron \"",
+        "property": "motoron",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "neq",
+                "v": "1",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 929.2064361572266,
+        "y": 878.5556039810181,
+        "wires": [
+            [
+                "7604fb94.a1df94",
+                "78ce9da9.c2f0a4",
+                "9affe35c.e6541"
+            ]
+        ]
+    },
+    {
+        "id": "78ce9da9.c2f0a4",
+        "type": "function",
+        "z": "43329aa5.bde1b4",
+        "name": "\" motoron \" = 1",
+        "func": "global.set(\"motoron\",1);",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1145.0161094665527,
+        "y": 855.2064628601074,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "db7e35f.4fc85c8",
+        "type": "switch",
+        "z": "43329aa5.bde1b4",
+        "name": "Check \" maxsm \"",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "maxsm",
+                "vt": "global"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 729.2222747802734,
+        "y": 1048.269732952118,
+        "wires": [
+            [
+                "de31bcc3.5aba1"
+            ],
+            [
+                "ee3c081e.351388"
+            ]
+        ]
+    },
+    {
+        "id": "b21a758f.144908",
+        "type": "ui_toast",
+        "z": "43329aa5.bde1b4",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": true,
+        "topic": "Please turn OFF the Motor !!!",
+        "name": "",
+        "x": 1151.7306213378906,
+        "y": 1093.3176155090332,
+        "wires": []
+    },
+    {
+        "id": "de31bcc3.5aba1",
+        "type": "switch",
+        "z": "43329aa5.bde1b4",
+        "name": "Check \" motoroff \"",
+        "property": "motoroff",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "neq",
+                "v": "0",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 948.9525680541992,
+        "y": 1047.587341785431,
+        "wires": [
+            [
+                "b21a758f.144908",
+                "f1a3973b.1f2d08",
+                "a5d74ca7.4a90c"
+            ]
+        ]
+    },
+    {
+        "id": "f1a3973b.1f2d08",
+        "type": "function",
+        "z": "43329aa5.bde1b4",
+        "name": "\" motoroff \" = 0",
+        "func": "global.set(\"motoroff\",0);",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1149.6668243408203,
+        "y": 1004.0953454971313,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2ff91001.a65f",
+        "type": "switch",
+        "z": "43329aa5.bde1b4",
+        "name": "Check \" lowt \"",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "lt",
+                "v": "lowt",
+                "vt": "global"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 711.6032943725586,
+        "y": 175.6031756401062,
+        "wires": [
+            [
+                "96ba8bd9.aaa518"
+            ],
+            [
+                "b2d1d665.e019a8"
+            ]
+        ]
+    },
+    {
+        "id": "55e30918.1ddf08",
+        "type": "ui_toast",
+        "z": "43329aa5.bde1b4",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": true,
+        "topic": "WARNING !!!  Temperature is too LOW.",
+        "name": "",
+        "x": 1135.2424201965332,
+        "y": 220.1747531890869,
+        "wires": []
+    },
+    {
+        "id": "96ba8bd9.aaa518",
+        "type": "switch",
+        "z": "43329aa5.bde1b4",
+        "name": "Check \" templ \"",
+        "property": "templ",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "neq",
+                "v": "1",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 920.7620010375977,
+        "y": 150.49207973480225,
+        "wires": [
+            [
+                "55e30918.1ddf08",
+                "5e902d3c.350cc4",
+                "c121b399.5675f"
+            ]
+        ]
+    },
+    {
+        "id": "5e902d3c.350cc4",
+        "type": "function",
+        "z": "43329aa5.bde1b4",
+        "name": "\" templ \" = 1",
+        "func": "global.set(\"templ\",1);",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1126.5120697021484,
+        "y": 124.76194190979004,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bc571ee9.3f60f",
+        "type": "switch",
+        "z": "43329aa5.bde1b4",
+        "name": "Check \" maxt \"",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "maxt",
+                "vt": "global"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 708.3373756408691,
+        "y": 312.82540559768677,
+        "wires": [
+            [
+                "2634d231.8d593e"
+            ],
+            [
+                "d85d8b7e.f3dc88"
+            ]
+        ]
+    },
+    {
+        "id": "823a14c2.787298",
+        "type": "ui_toast",
+        "z": "43329aa5.bde1b4",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": true,
+        "topic": "WARNING !!!   Temperature is too HIGH.",
+        "name": "",
+        "x": 1140.3692779541016,
+        "y": 359.3017625808716,
+        "wires": []
+    },
+    {
+        "id": "2634d231.8d593e",
+        "type": "switch",
+        "z": "43329aa5.bde1b4",
+        "name": "Check \" tempu \"",
+        "property": "tempu",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "neq",
+                "v": "0",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 912.0676116943359,
+        "y": 311.53576469421387,
+        "wires": [
+            [
+                "823a14c2.787298",
+                "a1c7e00b.f122",
+                "f4795194.306f6"
+            ]
+        ]
+    },
+    {
+        "id": "a1c7e00b.f122",
+        "type": "function",
+        "z": "43329aa5.bde1b4",
+        "name": "\" tempu \" = 0",
+        "func": "global.set(\"tempu\",0);",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1131.400894165039,
+        "y": 266.3293790817261,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d2e604aa.580478",
+        "type": "switch",
+        "z": "43329aa5.bde1b4",
+        "name": "Check \" lowh \"",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "lt",
+                "v": "lowh",
+                "vt": "global"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 715.1666107177734,
+        "y": 510.9166741371155,
+        "wires": [
+            [
+                "b962a36f.4598a"
+            ],
+            [
+                "82b1ff7d.05bba"
+            ]
+        ]
+    },
+    {
+        "id": "dcfbdd5f.d704d",
+        "type": "ui_toast",
+        "z": "43329aa5.bde1b4",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": true,
+        "topic": "WARNING !!!   Humidity is too LOW.",
+        "name": "",
+        "x": 1132.2461013793945,
+        "y": 549.4882183074951,
+        "wires": []
+    },
+    {
+        "id": "b962a36f.4598a",
+        "type": "switch",
+        "z": "43329aa5.bde1b4",
+        "name": "Check \" humidityl \"",
+        "property": "humidityl",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "neq",
+                "v": "1",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 911.7539901733398,
+        "y": 481.8055610656738,
+        "wires": [
+            [
+                "dcfbdd5f.d704d",
+                "b05e91ab.df5c6",
+                "f9d32f37.7ebb9"
+            ]
+        ]
+    },
+    {
+        "id": "b05e91ab.df5c6",
+        "type": "function",
+        "z": "43329aa5.bde1b4",
+        "name": "\" humidityl \" = 1",
+        "func": "global.set(\"humidityl\",1);",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1131.3730850219727,
+        "y": 460.7420883178711,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "aac4d948.471988",
+        "type": "switch",
+        "z": "43329aa5.bde1b4",
+        "name": "Check \" maxh \"",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "maxh",
+                "vt": "global"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 717.4364013671875,
+        "y": 662.9008135795593,
+        "wires": [
+            [
+                "3bce2d08.a47e62"
+            ],
+            [
+                "d11adeb4.d3a1c"
+            ]
+        ]
+    },
+    {
+        "id": "12fa8e11.ae9ca2",
+        "type": "ui_toast",
+        "z": "43329aa5.bde1b4",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": true,
+        "topic": "WARNING !!!   Humidity is too HIGH.",
+        "name": "",
+        "x": 1145.230266571045,
+        "y": 706.9485511779785,
+        "wires": []
+    },
+    {
+        "id": "3bce2d08.a47e62",
+        "type": "switch",
+        "z": "43329aa5.bde1b4",
+        "name": "Check \" humidityu \"",
+        "property": "humidityu",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "neq",
+                "v": "0",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 925.8808975219727,
+        "y": 656.7897796630859,
+        "wires": [
+            [
+                "12fa8e11.ae9ca2",
+                "a19fff11.b4f12",
+                "c7b815f1.599348"
+            ]
+        ]
+    },
+    {
+        "id": "a19fff11.b4f12",
+        "type": "function",
+        "z": "43329aa5.bde1b4",
+        "name": "\" humidityu \" = 0",
+        "func": "global.set(\"humidityu\",0);",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1144.833339691162,
+        "y": 611.7738780975342,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6c50e087.aec59",
+        "type": "twilio out",
+        "z": "43329aa5.bde1b4",
+        "twilio": "ccdc99a0.267198",
+        "twilioType": "sms",
+        "url": "",
+        "number": "+94717665259",
+        "name": "Message Out",
+        "x": 1424.9049530029297,
+        "y": 584.2856407165527,
+        "wires": []
+    },
+    {
+        "id": "9affe35c.e6541",
+        "type": "change",
+        "z": "43329aa5.bde1b4",
+        "name": "Set Message",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Please turn ON the Motor !!!",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1136.9527740478516,
+        "y": 906.9049091339111,
+        "wires": [
+            [
+                "6c50e087.aec59"
+            ]
+        ]
+    },
+    {
+        "id": "a5d74ca7.4a90c",
+        "type": "change",
+        "z": "43329aa5.bde1b4",
+        "name": "Set Message",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Please turn OFF the Motor !!!",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1143.2384300231934,
+        "y": 1048.2858743667603,
+        "wires": [
+            [
+                "6c50e087.aec59"
+            ]
+        ]
+    },
+    {
+        "id": "c7b815f1.599348",
+        "type": "change",
+        "z": "43329aa5.bde1b4",
+        "name": "Set Message",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "WARNING !!!   Humidity is too HIGH.",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1134.2380638122559,
+        "y": 659.6666469573975,
+        "wires": [
+            [
+                "6c50e087.aec59"
+            ]
+        ]
+    },
+    {
+        "id": "f9d32f37.7ebb9",
+        "type": "change",
+        "z": "43329aa5.bde1b4",
+        "name": "Set Message",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "WARNING !!!   Humidity is too LOW.",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1121.1428108215332,
+        "y": 507.9999523162842,
+        "wires": [
+            [
+                "6c50e087.aec59"
+            ]
+        ]
+    },
+    {
+        "id": "f4795194.306f6",
+        "type": "change",
+        "z": "43329aa5.bde1b4",
+        "name": "Set Message",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "WARNING !!!   Temperature is too HIGH.",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1132.0475463867188,
+        "y": 313.04760551452637,
+        "wires": [
+            [
+                "6c50e087.aec59"
+            ]
+        ]
+    },
+    {
+        "id": "c121b399.5675f",
+        "type": "change",
+        "z": "43329aa5.bde1b4",
+        "name": "Set Message",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "WARNING !!!  Temperature is too LOW.",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1131.3332633972168,
+        "y": 173.99998378753662,
+        "wires": [
+            [
+                "6c50e087.aec59"
+            ]
+        ]
+    },
+    {
+        "id": "a1581528.608358",
+        "type": "ui_button",
+        "z": "43329aa5.bde1b4",
+        "name": "Motor On",
+        "group": "dd769f3a.88aaf",
+        "order": 1,
+        "width": 2,
+        "height": 2,
+        "passthru": false,
+        "label": "Motor ON",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "green",
+        "icon": "https://cdn5.vectorstock.com/i/1000x1000/73/54/start-button-icon-symbol-premium-quality-isolated-vector-14807354.jpg",
+        "payload": "2",
+        "payloadType": "num",
+        "topic": "",
+        "topicType": "str",
+        "x": 1714.1668586730957,
+        "y": 920.833384513855,
+        "wires": [
+            [
+                "922027af.8f76a8",
+                "43a3fc6b.92d314",
+                "49c5cfaf.4fd67",
+                "5b8b5bf2.65d924"
+            ]
+        ]
+    },
+    {
+        "id": "e4e8db09.3db278",
+        "type": "ui_button",
+        "z": "43329aa5.bde1b4",
+        "name": "",
+        "group": "dd769f3a.88aaf",
+        "order": 2,
+        "width": 2,
+        "height": 2,
+        "passthru": false,
+        "label": "Motor Off",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "red",
+        "icon": "https://cdn5.vectorstock.com/i/1000x1000/73/54/start-button-icon-symbol-premium-quality-isolated-vector-14807354.jpg",
+        "payload": "1",
+        "payloadType": "num",
+        "topic": "",
+        "topicType": "str",
+        "x": 1717.7224082946777,
+        "y": 1007.5000600814819,
+        "wires": [
+            [
+                "922027af.8f76a8",
+                "7427394b.d4ed78",
+                "49c5cfaf.4fd67",
+                "f52891ce.d6f0b"
+            ]
+        ]
+    },
+    {
+        "id": "922027af.8f76a8",
+        "type": "debug",
+        "z": "43329aa5.bde1b4",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1695.9446449279785,
+        "y": 1118.5000762939453,
+        "wires": []
+    },
+    {
+        "id": "43a3fc6b.92d314",
+        "type": "ui_toast",
+        "z": "43329aa5.bde1b4",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "green",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "raw": true,
+        "topic": "Motor ON command sent",
+        "name": "Motor On",
+        "x": 2048.166862487793,
+        "y": 942.0556011199951,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7427394b.d4ed78",
+        "type": "ui_toast",
+        "z": "43329aa5.bde1b4",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "red",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "raw": true,
+        "topic": "Motor OFF command sent",
+        "name": "Motor Off",
+        "x": 2048.6112480163574,
+        "y": 986.2778425216675,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "eaae77ba.6aa408",
+        "type": "ui_text",
+        "z": "43329aa5.bde1b4",
+        "group": "dd769f3a.88aaf",
+        "order": 3,
+        "width": 4,
+        "height": 1,
+        "name": "Motor Status",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "x": 2289.833553314209,
+        "y": 972.722279548645,
+        "wires": []
+    },
+    {
+        "id": "49c5cfaf.4fd67",
+        "type": "mqtt out",
+        "z": "43329aa5.bde1b4",
+        "name": "",
+        "topic": "Group02/inT",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "ad1d35c5.2427f8",
+        "x": 1883.5447387695312,
+        "y": 966.7667093276978,
+        "wires": []
+    },
+    {
+        "id": "5b8b5bf2.65d924",
+        "type": "change",
+        "z": "43329aa5.bde1b4",
+        "name": "Set Status ON",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Motor is ON",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2069.5447425842285,
+        "y": 903.3667097091675,
+        "wires": [
+            [
+                "eaae77ba.6aa408"
+            ]
+        ]
+    },
+    {
+        "id": "f52891ce.d6f0b",
+        "type": "change",
+        "z": "43329aa5.bde1b4",
+        "name": "Set Status OFF",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Motor is OFF",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2067.5447425842285,
+        "y": 1030.3667106628418,
+        "wires": [
+            [
+                "eaae77ba.6aa408"
+            ]
+        ]
+    },
+    {
+        "id": "8c8a544f.ef5278",
+        "type": "ui_text_input",
+        "z": "3308500f.11eed",
+        "name": "",
+        "label": "City",
+        "tooltip": "",
+        "group": "d741e10e.86e91",
+        "order": 1,
+        "width": 4,
+        "height": 1,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1509.5001258850098,
+        "y": 316.71434783935547,
+        "wires": [
+            [
+                "6dd4399d.b6d748"
+            ]
+        ]
+    },
+    {
+        "id": "2fcc69bb.2bf756",
+        "type": "ui_text_input",
+        "z": "3308500f.11eed",
+        "name": "",
+        "label": "Country",
+        "tooltip": "",
+        "group": "d741e10e.86e91",
+        "order": 2,
+        "width": 4,
+        "height": 1,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1513.4287376403809,
+        "y": 385.57149028778076,
+        "wires": [
+            [
+                "557e8e2f.787fa"
+            ]
+        ]
+    },
+    {
+        "id": "6dd4399d.b6d748",
+        "type": "function",
+        "z": "3308500f.11eed",
+        "name": "\" cityg \"",
+        "func": "global.set(\"cityg\",msg.payload);",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1669.1430015563965,
+        "y": 317.4286427497864,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "557e8e2f.787fa",
+        "type": "function",
+        "z": "3308500f.11eed",
+        "name": "\" countryg \"",
+        "func": "global.set(\"countryg\",msg.payload);",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1681.571517944336,
+        "y": 384.8572082519531,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b2d1d665.e019a8",
+        "type": "function",
+        "z": "43329aa5.bde1b4",
+        "name": "\" templ \" = 0",
+        "func": "global.set(\"templ\",0);",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 910.5999870300293,
+        "y": 200.00002670288086,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d85d8b7e.f3dc88",
+        "type": "function",
+        "z": "43329aa5.bde1b4",
+        "name": "\" tempu \" = 1",
+        "func": "global.set(\"tempu\",1);",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 906.6000862121582,
+        "y": 370.8000240325928,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "82b1ff7d.05bba",
+        "type": "function",
+        "z": "43329aa5.bde1b4",
+        "name": "\" humidityl \" = 0",
+        "func": "global.set(\"humidityl\",0);",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 903.3333892822266,
+        "y": 532.6666946411133,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d11adeb4.d3a1c",
+        "type": "function",
+        "z": "43329aa5.bde1b4",
+        "name": "\" humidityu \" = 1",
+        "func": "global.set(\"humidityu\",1);",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 910.3334808349609,
+        "y": 712.9999866485596,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bf9a2dfe.05673",
+        "type": "function",
+        "z": "43329aa5.bde1b4",
+        "name": "\" motoron \" = 0",
+        "func": "global.set(\"motoron\",0);",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 916.3333892822266,
+        "y": 923.0002336502075,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ee3c081e.351388",
+        "type": "function",
+        "z": "43329aa5.bde1b4",
+        "name": "\" motoroff \" = 1",
+        "func": "global.set(\"motoroff\",1);",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 925.6668586730957,
+        "y": 1098.0002546310425,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8e5a73a2.7fc68",
+        "type": "ui_toast",
+        "z": "43329aa5.bde1b4",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "raw": true,
+        "topic": "Done !",
+        "name": "Done",
+        "x": 1854.500373840332,
+        "y": 585.055655002594,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f2a35abd.5e9098",
+        "type": "ui_toast",
+        "z": "43329aa5.bde1b4",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "raw": true,
+        "topic": "Done !",
+        "name": "Done",
+        "x": 2041.3336563110352,
+        "y": 750.7778263092041,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a5ff2f90.1e122",
+        "type": "ui_toast",
+        "z": "43329aa5.bde1b4",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "raw": true,
+        "topic": "Done !",
+        "name": "Done",
+        "x": 1979.6665992736816,
+        "y": 355.77789878845215,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "19787ff6.fac1e",
+        "type": "change",
+        "z": "43329aa5.bde1b4",
+        "name": "Timestamp",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "date"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1861.2780418395996,
+        "y": 749.9445943832397,
+        "wires": [
+            [
+                "f2a35abd.5e9098"
+            ]
+        ]
+    },
+    {
+        "id": "87b2dba4.543528",
+        "type": "ui_dropdown",
+        "z": "3308500f.11eed",
+        "name": "Input Method",
+        "label": "",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "b957206d.fbeaf",
+        "order": 1,
+        "width": 4,
+        "height": 1,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "Select Input Type",
+                "value": -1,
+                "type": "num"
+            },
+            {
+                "label": "City/Country",
+                "value": 0,
+                "type": "num"
+            },
+            {
+                "label": "Cordinates",
+                "value": 1,
+                "type": "num"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 257.5714340209961,
+        "y": 182.42857933044434,
+        "wires": [
+            [
+                "c8f736f1.ddcf48",
+                "dbd03c17.671ca",
+                "9b3e8110.97c62",
+                "341aecea.b4c884",
+                "7c8a0da7.dfe574"
+            ]
+        ]
+    },
+    {
+        "id": "86df1cf3.79ef1",
+        "type": "ui_text_input",
+        "z": "3308500f.11eed",
+        "name": "",
+        "label": "Latitude",
+        "tooltip": "",
+        "group": "2728a758.13b708",
+        "order": 1,
+        "width": 4,
+        "height": 1,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1514.0715103149414,
+        "y": 464.142879486084,
+        "wires": [
+            [
+                "725d7189.5a871"
+            ]
+        ]
+    },
+    {
+        "id": "30e44429.96fa3c",
+        "type": "ui_text_input",
+        "z": "3308500f.11eed",
+        "name": "",
+        "label": "Longitude",
+        "tooltip": "",
+        "group": "2728a758.13b708",
+        "order": 2,
+        "width": 4,
+        "height": 1,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1513.0001258850098,
+        "y": 538.0000114440918,
+        "wires": [
+            [
+                "a9839fd6.cb92c"
+            ]
+        ]
+    },
+    {
+        "id": "725d7189.5a871",
+        "type": "function",
+        "z": "3308500f.11eed",
+        "name": "\" latg \"",
+        "func": "global.set(\"latg\",msg.payload);",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1666.2143859863281,
+        "y": 464.85718727111816,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a9839fd6.cb92c",
+        "type": "function",
+        "z": "3308500f.11eed",
+        "name": "\" long \"",
+        "func": "global.set(\"long\",msg.payload);",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1692.6430206298828,
+        "y": 538.785774230957,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c8f736f1.ddcf48",
+        "type": "function",
+        "z": "3308500f.11eed",
+        "name": "Show/Hide",
+        "func": "if(msg.payload==0){\n    return{\n        payload:{\"group\":{\"show\":[\"Settings_City/Country\"]}}\n    }\n}else{\n    return{\n        payload:{\"group\":{\"hide\":[\"Settings_City/Country\"]}}\n    }\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 499.42861175537104,
+        "y": 81.42857360839844,
+        "wires": [
+            [
+                "3eb0ea98.9ecd16"
+            ]
+        ]
+    },
+    {
+        "id": "dbd03c17.671ca",
+        "type": "function",
+        "z": "3308500f.11eed",
+        "name": "Enable/Disable",
+        "func": "if(msg.payload==0){\n    msg={\"enabled\":true};\n}\nelse{\n    msg={\"enabled\":false};\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 505.71429443359375,
+        "y": 132.85714721679688,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9b3e8110.97c62",
+        "type": "function",
+        "z": "3308500f.11eed",
+        "name": "\" inputMethod \"",
+        "func": "global.set(\"inputMethod\",msg.payload);",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 505.71429443359375,
+        "y": 181.42857360839844,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "341aecea.b4c884",
+        "type": "function",
+        "z": "3308500f.11eed",
+        "name": "Enable/Disable",
+        "func": "if(msg.payload==1){\n    msg={\"enabled\":true};\n}\nelse{\n    msg={\"enabled\":false};\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 505.71429443359375,
+        "y": 230,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7c8a0da7.dfe574",
+        "type": "function",
+        "z": "3308500f.11eed",
+        "name": "Show/Hide",
+        "func": "if(msg.payload==1){\n    return{\n        payload:{\"group\":{\"show\":[\"Settings_Cordinates\"]}}\n    }\n}else{\n    return{\n        payload:{\"group\":{\"hide\":[\"Settings_Cordinates\"]}}\n    }\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 495.71429443359375,
+        "y": 280,
+        "wires": [
+            [
+                "c126aa27.196e58"
+            ]
+        ]
+    },
+    {
+        "id": "3b939b63.fceb54",
+        "type": "function",
+        "z": "3308500f.11eed",
+        "name": "Null",
+        "func": "msg.payload=null;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1082.6430015563965,
+        "y": 429.28575325012207,
+        "wires": [
+            [
+                "5ef015d5.cea4dc"
+            ]
+        ]
+    },
+    {
+        "id": "5ef015d5.cea4dc",
+        "type": "switch",
+        "z": "3308500f.11eed",
+        "name": "Check Input Method",
+        "property": "inputMethod",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1276.9287948608398,
+        "y": 428.71431159973145,
+        "wires": [
+            [
+                "8c8a544f.ef5278",
+                "2fcc69bb.2bf756"
+            ],
+            [
+                "86df1cf3.79ef1",
+                "30e44429.96fa3c"
+            ]
+        ]
+    },
+    {
+        "id": "3eb0ea98.9ecd16",
+        "type": "ui_ui_control",
+        "z": "3308500f.11eed",
+        "name": "CIty/Country",
+        "events": "all",
+        "x": 660.4286575317383,
+        "y": 81.8571424484253,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c126aa27.196e58",
+        "type": "ui_ui_control",
+        "z": "3308500f.11eed",
+        "name": "Cordinates",
+        "events": "all",
+        "x": 665.8572540283203,
+        "y": 280.35718727111816,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a126b53c.53a878",
+        "type": "ui_button",
+        "z": "43329aa5.bde1b4",
+        "name": "",
+        "group": "2728a758.13b708",
+        "order": 3,
+        "width": 2,
+        "height": 1,
+        "passthru": false,
+        "label": "Submit",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "add",
+        "payload": "",
+        "payloadType": "date",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1849.6191329956055,
+        "y": 412.5001163482666,
+        "wires": [
+            [
+                "44ea641d.08668c",
+                "a5ff2f90.1e122",
+                "1ec18cd0.928843"
+            ]
+        ]
+    },
+    {
+        "id": "3a0f1f95.d2f1b",
+        "type": "function",
+        "z": "43329aa5.bde1b4",
+        "name": "Set Location",
+        "func": "let latd=global.get(\"latg\");\nlet lond=global.get(\"long\");\nmsg.location={\"lat\":latd,\"lon\":lond};\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2635.5719604492188,
+        "y": 594.8810749053955,
+        "wires": [
+            [
+                "74a0a76c.739e88"
+            ]
+        ]
+    },
+    {
+        "id": "74a0a76c.739e88",
+        "type": "openweathermap",
+        "z": "43329aa5.bde1b4",
+        "name": "",
+        "wtype": "current",
+        "lon": "",
+        "lat": "",
+        "city": "",
+        "country": "",
+        "language": "en",
+        "x": 2809.143253326416,
+        "y": 594.8810749053955,
+        "wires": [
+            [
+                "39609adf.a227b6",
+                "2ca06816.7a9b18"
+            ]
+        ]
+    },
+    {
+        "id": "89d8aa10.5c1288",
+        "type": "switch",
+        "z": "43329aa5.bde1b4",
+        "name": "Check Input Method",
+        "property": "inputMethod",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 2424.214984893799,
+        "y": 573.666748046875,
+        "wires": [
+            [
+                "ee321b2b.42c298"
+            ],
+            [
+                "3a0f1f95.d2f1b"
+            ]
+        ]
+    },
+    {
+        "id": "cee87a02.3d8d28",
+        "type": "ui_button",
+        "z": "3308500f.11eed",
+        "name": "",
+        "group": "d741e10e.86e91",
+        "order": 4,
+        "width": 2,
+        "height": 1,
+        "passthru": false,
+        "label": "Clear",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "clear",
+        "payload": "",
+        "payloadType": "date",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 907.6430323464529,
+        "y": 391.64287608010426,
+        "wires": [
+            [
+                "3b939b63.fceb54"
+            ]
+        ]
+    },
+    {
+        "id": "756b8139.bc727",
+        "type": "ui_button",
+        "z": "3308500f.11eed",
+        "name": "",
+        "group": "2728a758.13b708",
+        "order": 4,
+        "width": 2,
+        "height": 1,
+        "passthru": false,
+        "label": "Clear",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "clear",
+        "payload": "",
+        "payloadType": "date",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 914.071508680071,
+        "y": 455.9285873685564,
+        "wires": [
+            [
+                "3b939b63.fceb54"
+            ]
+        ]
+    },
+    {
+        "id": "36443611.e8ee8a",
+        "type": "ui_text",
+        "z": "3308500f.11eed",
+        "group": "8f65dab2.df6e28",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Solil Moisture",
+        "format": "",
+        "layout": "col-center",
+        "x": 155.00001525878906,
+        "y": 521.8000144958496,
+        "wires": []
+    },
+    {
+        "id": "15b214e8.f5540b",
+        "type": "ui_text",
+        "z": "3308500f.11eed",
+        "group": "8f65dab2.df6e28",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Humidity",
+        "format": "",
+        "layout": "col-center",
+        "x": 130.93333435058594,
+        "y": 647.5333251953125,
+        "wires": []
+    },
+    {
+        "id": "435205c8.97de6c",
+        "type": "ui_text",
+        "z": "3308500f.11eed",
+        "group": "8f65dab2.df6e28",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Temperature",
+        "format": "",
+        "layout": "col-center",
+        "x": 147.93333435058594,
+        "y": 779.5333251953125,
+        "wires": []
+    }
+]
